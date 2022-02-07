@@ -36,3 +36,6 @@ net.netfilter.nf_conntrack_udp_timeout=60
 net.netfilter.nf_conntrack_udp_timeout_stream=180
 net.netfilter.nf_conntrack_helper=1
 EOF
+
+# disable bridge firewalling
+sed -i 's/=1/=0/g' package/kernel/linux/files/sysctl-br-netfilter.conf
