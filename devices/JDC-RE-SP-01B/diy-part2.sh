@@ -17,7 +17,9 @@ sed -i 's/192.168.1.1/192.168.199.1/g' package/base-files/files/bin/config_gener
 sed -i "s/hostname='OpenWrt'/hostname='JDCloud'/" package/base-files/files/bin/config_generate
 
 # Modify default theme
-rm -rf package/lean/luci-theme-argon
+# rm -rf package/lean/luci-theme-argon
+find ./ -name luci-theme-argon | xargs rm -rf;
+find ./ -name luci-app-argon-config | xargs rm -rf;
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/' feeds/luci/collections/luci/Makefile
 
