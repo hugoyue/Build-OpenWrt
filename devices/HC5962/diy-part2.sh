@@ -41,3 +41,6 @@ EOF
 
 # disable bridge firewalling
 sed -i 's/=1/=0/g' package/kernel/linux/files/sysctl-br-netfilter.conf
+
+# Fix missing libcap dependencies
+sed -i s/"DEPENDS:=+libnl-tiny +libelf"/"DEPENDS:=+libnl-tiny +libelf +libcap"/g package/network/utils/iproute2/Makefile
