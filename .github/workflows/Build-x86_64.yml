@@ -21,7 +21,7 @@ on:
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede.git
-  REPO_BRANCH: 20220716
+  REPO_BRANCH: 20221001
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: x86_64.config
   DIY_P1_SH: devices/x86_64/diy-part1.sh
